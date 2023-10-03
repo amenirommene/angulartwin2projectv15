@@ -1,0 +1,9 @@
+<ul>
+<li *ngFor="let u of list; let j=index">
+  **{{j}}**  {{u.id}} - {{u.firstName}} - <img [src]="u.picture">
+  <button [disabled]="u.accountCategory === 'Admin'" (click)="delete(j)" >Delete</button>
+    <button *ngIf="u.accountCategory != 'Admin'" (click)="delete(j)" >Delete</button>
+    <button [hidden]="u.accountCategory === 'Admin'" (click)="delete(j)" >Delete</button>
+</li>
+
+</ul>

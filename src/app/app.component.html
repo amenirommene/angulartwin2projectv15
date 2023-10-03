@@ -1,0 +1,36 @@
+<!--<h1>Bonjour</h1>
+<app-test></app-test>
+
+{{ title }} -----><!---interpolation-->
+<!---<button (click)="test('aaaa')">test</button>
+<div>
+<input value="val1"> <br>
+<input [value]="val1">
+</div>
+<div>
+    <h2>Two way data-binding</h2>
+    <input [value]="chaine1" (keyup)="getVal(x1.value)" #x1> {{chaine1}} {{x1}}
+</div>
+<div>
+    <h2>Two way data-binding avec NgModel</h2>
+    <input [(ngModel)]="chaine2"> {{chaine2}} {{x1}}
+</div>---->
+
+<div class="container">
+    <div class="container" id="body">
+      <!---start navbar--->
+      <app-header></app-header>
+      <!---end navbar--->
+      <!---start slide--->
+      <app-slider></app-slider>
+      <!---end slide--->
+      <!---start accountList section--->
+      <app-accounts></app-accounts>
+      <!---end accountList section--->
+      <app-list-user></app-list-user>
+    </div>
+    <!-----Footer Section------>
+    <app-footer></app-footer>
+    <!-----End Footer Section------>
+  </div>
+  
