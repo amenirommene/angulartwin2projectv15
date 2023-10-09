@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { User } from '../models/user';
 
 @Component({
@@ -10,6 +11,12 @@ export class ListUserComponent {
   category : string="";
   maclasse1 = 'cl1';
   maclasse2 = 'cl2';
+  //injecter le service ActivatedRoute dans ce composant
+  //sous le nom de ac 
+  constructor(private ac:ActivatedRoute){
+   console.log(this.ac.snapshot.params['category']);
+
+  }
   green : string = 'green';
   list : User[]= 
   [ 
