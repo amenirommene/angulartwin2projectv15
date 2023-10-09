@@ -7,7 +7,10 @@ import { User } from '../models/user';
   styleUrls: ['./list-user.component.css']
 })
 export class ListUserComponent {
-
+  category : string="";
+  maclasse1 = 'cl1';
+  maclasse2 = 'cl2';
+  green : string = 'green';
   list : User[]= 
   [ 
   { 
