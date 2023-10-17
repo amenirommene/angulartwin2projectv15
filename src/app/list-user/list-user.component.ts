@@ -14,8 +14,16 @@ export class ListUserComponent {
   //injecter le service ActivatedRoute dans ce composant
   //sous le nom de ac 
   constructor(private ac:ActivatedRoute){
-   console.log(this.ac.snapshot.params['category']);
+    console.log("custructor");
+  }
 
+  //méthode hook qui fait partie du cycle de vie d'un composant
+  //appelé automatiquement après la création du composant
+  ngOnInit(){
+    //console.log(this.ac.snapshot.params['category']);
+  console.log("initiation ListUserComponent");
+  //this.category=this.ac.snapshot.params['category'];
+  this.ac.paramMap.subscribe(res=>this.category=res.get('category'));
   }
   green : string = 'green';
   list : User[]= 
