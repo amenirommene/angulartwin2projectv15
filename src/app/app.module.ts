@@ -7,24 +7,26 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { HeaderComponent } from './header/header.component';
 import { SliderComponent } from './slider/slider.component';
-import { AccountsComponent } from './accounts/accounts.component';
+import { AccountsComponent } from './user/components/accounts/accounts.component';
 import { FooterComponent } from './footer/footer.component';
-import { ListUserComponent } from './list-user/list-user.component';
+import { ListUserComponent } from './user/components/list-user/list-user.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [ // la liste des composants
     AppComponent,
-    TestComponent,
+//TestComponent,
     HeaderComponent,
     SliderComponent,
-    AccountsComponent,
+   // AccountsComponent,
     FooterComponent,
-    ListUserComponent
+   // ListUserComponent,
+    NotFoundComponent
   ],
   imports: [ //la liste des modules utiles
     BrowserModule, //ngFor/ngIf
     AppRoutingModule,
-    FormsModule
+   // FormsModule
   ],
   providers: [], //les services
   bootstrap: [AppComponent] //quel(s) composant(s) appeler dans le index.html
