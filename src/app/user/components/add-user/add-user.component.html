@@ -1,0 +1,62 @@
+<p>add-user works!</p>
+
+<input required type="text" [(ngModel)]="first" value="test" #x="ngModel" > <br>
+touched / untouched : {{  x.touched  }} / {{  x.untouched  }}
+<br>
+dirty / pristine : {{x.dirty}} / {{x.pristine}}
+<br>
+valid / invalid : {{x.valid}} / {{x.invalid}}
+
+<div class="ng-invalid" *ngIf="x.touched && x.invalid">
+    Champ obligatoire 
+</div>
+<form #f="ngForm" (submit)="addUser()">
+    FirstName: 
+    <input (keyup)="test(firstname.errors)" name="firstname" type="text" [(ngModel)]="user.firstName" #firstname="ngModel" required minlength="6" pattern="[a-zA-Z]*"> <br>
+<div *ngIf="firstname.invalid">
+<div *ngIf="firstname.errors['required']">
+    Champ obligatoire
+</div>
+<div *ngIf="firstname.errors['minlength']">
+min {{firstname.errors['minlength']['requiredLength']}} caractères
+alors que vous avez écrit 
+{{ firstname.errors['minlength']['actualLength'] }}
+</div>
+<div *ngIf="firstname.errors['pattern']">
+    ne contient que des lettres
+</div>
+</div>
+    <br>
+LastName: 
+    <input name="lastname" type="text" [(ngModel)]="user.lastName" #lastname="ngModel" required minlength="3" pattern="[a-zA-Z]*"> <br>
+<br>
+
+Birthdate: 
+    <input name="birthdate" type="text" [(ngModel)]="user.birthDate"> <br>
+<br>
+Email: 
+    <input name="email" type="email" [(ngModel)]="user.email" #email="ngModel" pattern="^[a-zA-Z0-9._-]"> <br>
+<div *ngIf="email.invalid">
+    il faut avoir un compte gmail
+</div>
+    <br>
+Password: 
+    <input name="password" type="password" [(ngModel)]="user.password" #pwd="ngModel" pattern="^[a-zA-Z0-9]{8,}?"> <br>
+<br>
+Profession: 
+    <input name="profession" type="text" [(ngModel)]="user.profession" > <br>
+<br>
+Category: 
+    <input name="category" type="text" [(ngModel)]="user.accountCategory" #cat="ngModel" pattern="Customer"> <br>
+<br>
+<div *ngIf="cat.invalid">
+    il faut que ça soit customer
+</div>
+<button  [disabled]="f.invalid">Save</button>
+</form>
+
+
+
+
+
+
