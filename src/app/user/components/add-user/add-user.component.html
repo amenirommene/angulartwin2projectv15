@@ -11,6 +11,7 @@ valid / invalid : {{x.valid}} / {{x.invalid}}
     Champ obligatoire 
 </div>
 <form #f="ngForm" (submit)="addUser()">
+    <div ngModelGroup="groupe1" #gpe1="ngModelGroup">
     FirstName: 
     <input (keyup)="test(firstname.errors)" name="firstname" type="text" [(ngModel)]="user.firstName" #firstname="ngModel" required minlength="6" pattern="[a-zA-Z]*"> <br>
 <div *ngIf="firstname.invalid">
@@ -35,7 +36,7 @@ Birthdate:
     <input name="birthdate" type="text" [(ngModel)]="user.birthDate"> <br>
 <br>
 Email: 
-    <input name="email" type="email" [(ngModel)]="user.email" #email="ngModel" pattern="^[a-zA-Z0-9._-]"> <br>
+    <input name="email" type="email" [(ngModel)]="user.email" #email="ngModel" required pattern="^[a-zA-Z0-9._-]+@gmail.com"> <br>
 <div *ngIf="email.invalid">
     il faut avoir un compte gmail
 </div>
@@ -43,6 +44,8 @@ Email:
 Password: 
     <input name="password" type="password" [(ngModel)]="user.password" #pwd="ngModel" pattern="^[a-zA-Z0-9]{8,}?"> <br>
 <br>
+</div>
+<div *ngIf="gpe1.valid">
 Profession: 
     <input name="profession" type="text" [(ngModel)]="user.profession" > <br>
 <br>
@@ -52,6 +55,8 @@ Category:
 <div *ngIf="cat.invalid">
     il faut que ça soit customer
 </div>
+</div>
+
 <button  [disabled]="f.invalid">Save</button>
 </form>
 
