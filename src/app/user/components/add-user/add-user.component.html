@@ -1,5 +1,5 @@
 <p>add-user works!</p>
-
+<h1>Template driven form</h1>
 <input required type="text" [(ngModel)]="first" value="test" #x="ngModel" > <br>
 touched / untouched : {{  x.touched  }} / {{  x.untouched  }}
 <br>
@@ -50,11 +50,9 @@ Profession:
     <input name="profession" type="text" [(ngModel)]="user.profession" > <br>
 <br>
 Category: 
-    <input name="category" type="text" [(ngModel)]="user.accountCategory" #cat="ngModel" pattern="Customer"> <br>
+    <input disabled name="category" type="text" [(ngModel)]="user.accountCategory" #cat="ngModel" required> <br>
 <br>
-<div *ngIf="cat.invalid">
-    il faut que ça soit customer
-</div>
+
 </div>
 
 <button  [disabled]="f.invalid">Save</button>

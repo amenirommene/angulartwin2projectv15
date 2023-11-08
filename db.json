@@ -102,6 +102,43 @@
       "birthDate": "12/12/2000",
       "profession": "ffff",
       "id": 10
+    },
+    {
+      "groupe1": {
+        "first": "testtt",
+        "last": "azertyuiop",
+        "password": "44444",
+        "birthdate": "2023-11-09",
+        "monemail": "rommeneameni@gmail.com"
+      },
+      "profession": "azertyuiop",
+      "category": "Customer",
+      "id": 11
+    },
+    {
+      "firstName": "azertyuiop",
+      "lastName": "^sdfghjklmù",
+      "birthDate": "2023-11-16",
+      "profession": "azertyuiop",
+      "password": "dfghjkl",
+      "email": "rommeneameni@gmail.com",
+      "accountCategory": "Customer",
+      "id": 12
+    },
+    {
+      "firstName": "azertyuiop",
+      "lastName": "sdfghjklmjjj",
+      "birthDate": "2023-12-07",
+      "profession": "dfghjk;",
+      "password": "11111",
+      "email": "ameni.rommene@gmail.com",
+      "accountCategory": "Customer",
+      "id": 13
+    },
+    {
+      "firstName": "f1",
+      "lastName": "l1",
+      "id": 14
     }
   ]
 }

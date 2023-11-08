@@ -1,4 +1,5 @@
-<form [formGroup]="myForm">
+<h1>Reactive form</h1>
+<form [formGroup]="myForm" (submit)="addUser()">
 <div formGroupName="groupe1">
 FirstName : <input type="text" formControlName="first"><br>
 <div *ngIf="myForm.get('groupe1').get('first').touched && myForm.get('groupe1').get('first').invalid">

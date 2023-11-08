@@ -4,6 +4,7 @@ categorie : <input type="text" [(ngModel)]="category">
   <div *ngFor="let u of list; let j=index; 
   let f=first; let l=last; let o=odd; let e=even " >
 <li *ngIf="u.accountCategory == category">
+  <a [routerLink]="['updateuser2', u.id]">update</a>
 <div>  
 <div  [style.color]="f ? 'red' : green" [style.fontSize.px]="f ? '25' : '50'">**{{j}}**  {{u.id}} - {{u.firstName}} 
   --position : {{o}}--
@@ -19,5 +20,4 @@ categorie : <input type="text" [(ngModel)]="category">
   </li>
 </div>
 </ul>
-<button (click)="addUser()">add</button>
-<app-add-user></app-add-user>
+
