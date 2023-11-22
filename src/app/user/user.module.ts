@@ -7,6 +7,7 @@ import { ListUserComponent } from './components/list-user/list-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { AddUserReactiveComponent } from './components/add-user-reactive/add-user-reactive.component';
+import { AccountComponent } from './components/account/account.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { AddUserReactiveComponent } from './components/add-user-reactive/add-use
     AccountsComponent,
     ListUserComponent,
     AddUserComponent,
-    AddUserReactiveComponent
+    AddUserReactiveComponent,
+    AccountComponent
   ],
   imports: [
     CommonModule,

@@ -16,6 +16,29 @@
   "profile": {
     "name": "typicode"
   },
+  "accounts": [
+    {
+      "id": 1,
+      "image": "../assets/images/admin.png",
+      "title": "Admin Account",
+      "description": "An admin account has privileges to manage services for other people in the App.",
+      "category": "Admin"
+    },
+    {
+      "id": 2,
+      "image": "../assets/images/customer.png",
+      "title": "Customer Account",
+      "description": "An admin account has privileges to manage services for other people in the App.",
+      "category": "Customer"
+    },
+    {
+      "id": 3,
+      "image": "../assets/images/golden.png",
+      "title": "Golden Account",
+      "description": "An admin account has privileges to manage services for other people in the App.",
+      "category": "Golden"
+    }
+  ],
   "users": [
     {
       "id": 1,

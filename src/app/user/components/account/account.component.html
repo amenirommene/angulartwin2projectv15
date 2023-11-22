@@ -1,0 +1,13 @@
+<div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+      <img [src]="image" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+        <p class="card-text">{{ description }}</p>
+        <a [routerLink]="['users',category]" class="btn btn-primary">show all</a>
+        <a [routerLink]="['adduser1',category]" class="btn btn-primary">add TD</a>
+        <a [routerLink]="['adduser2',category]" class="btn btn-primary">add RF</a>
+      </div>
+      <button (click)="delete()">delete</button>
+    </div>
+  </div>

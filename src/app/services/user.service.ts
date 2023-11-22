@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Account } from '../models/account';
 import { User } from '../models/user';
 
 @Injectable({ //décorateur de classe
@@ -8,10 +9,16 @@ import { User } from '../models/user';
 })
 export class UserService {
 
+  accountsURL : string = "http://localhost:3000/accounts";
   constructor(private _http:HttpClient) {
     console.log("je suis user service ");
    }
-
+   deleteAccount(account:Account):Observable<Account>{
+    return this._http.delete<Account>(this.accountsURL+"/"+account.id);
+   }
+   getAllAccounts():Observable<Account[]>{
+    return this._http.get<Account[]>(this.accountsURL);
+   }
    getUsersFromDb():Observable<User[]>{
    return this._http.get<User[]>("http://localhost:3000/users");
    }

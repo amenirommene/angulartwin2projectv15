@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [ // la liste des composants
     AppComponent,
-//TestComponent,
+    TestComponent,
     HeaderComponent,
     SliderComponent,
    // AccountsComponent,

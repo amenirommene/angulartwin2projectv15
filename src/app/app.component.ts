@@ -19,4 +19,7 @@ export class AppComponent {
   getVal(x:string){
   this.chaine1=x;
   }
+  ngAfterViewInit(){
+    
+  }
 }
