@@ -23,7 +23,8 @@
       <!---end navbar--->
       <router-outlet></router-outlet>
     <!-----Footer Section------>
-    <app-test [prop1]="title"></app-test>
+    <app-test #x [prop1]="title"></app-test>
+    {{x.name}}
     <app-footer></app-footer>
     <!-----End Footer Section------>
   </div>

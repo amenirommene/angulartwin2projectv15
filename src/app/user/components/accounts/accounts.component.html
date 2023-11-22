@@ -2,7 +2,8 @@
 <input name="rrr" #a>
 <button (click)="accessFils()">mon fils</button>
 <div class="row">
-  <app-account (prop2)="deleteAccount($event, ac)" *ngFor="let ac of listAccounts" [image]="ac.image" [title]="ac.title" [description]="ac.description" [category]="ac.category">
+  <app-account (prop2)="deleteAccount($event, ac)" *ngFor="let ac of listAccounts" 
+  [image]="ac.image" [title]="ac.title" [description]="ac.description" [category]="ac.category">
   </app-account>
 </div>
 <router-outlet></router-outlet>

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { UserService } from './services/user.service';
+import { TestComponent } from './test/test.component';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,8 @@ import { UserService } from './services/user.service';
 })
 export class AppComponent {
 //injécter le service UserService dans ce composant sous le nom de us
-  constructor(private us:UserService){}
+@ViewChild(TestComponent) private fils1:TestComponent; 
+constructor(private us:UserService){}
   title = 'AngularProjectTWIN2';
   val1="je proviens du ts";
   chaine1 = "first";
@@ -19,7 +21,8 @@ export class AppComponent {
   getVal(x:string){
   this.chaine1=x;
   }
+  //déclenché quand la vue du composant parent est prête
   ngAfterViewInit(){
-    
+   console.log("From parent :"+this.fils1.name);
   }
 }

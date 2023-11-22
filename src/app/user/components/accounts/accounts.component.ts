@@ -30,7 +30,7 @@ ngAfterViewInit(){
   //méthode hook qui se déclenche une fois la vue du composant est initialisée
 }
 ngAfterContentInit(){
-  console.log(this.monfils.name);
-  this.monfils.alertMe();
+ // console.log(this.monfils.name);
+ // this.monfils.alertMe();
 }
 }
